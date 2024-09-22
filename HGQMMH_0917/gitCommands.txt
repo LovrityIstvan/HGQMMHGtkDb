@@ -1,0 +1,21 @@
+git config --global user.name "[name]"
+git config --global user.email "[email address]"
+git init
+git clone <repository_url>
+git clone –branch <branch_name> <repository_url>
+git pull
+git push
+
+Local
+1. git status - állapot ellenőrzés
+2. git add "HGQMMH_0917" - feltöltés, vagy ha több fájl van benne, akkor
+3. git add . - feltölti az összes fájlt ami a neptun_0917-ben van
+4. git commit -m "3 fájl mentes" - fel commitoltuk a stage-re
+5. git log - látni milyen commitok készültek
+6. shortlog - csak annyi látható
+
+
+
+Feltöltés
+
+git push - majd feltöltés
