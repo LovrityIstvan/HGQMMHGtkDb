@@ -19,6 +19,3 @@ Local
 Feltöltés
 
 git push - majd feltöltés
-
-
-https://www.grammaticalframework.org/qconv/qconv-a.html
