@@ -1,0 +1,8 @@
+UPDATE Auto Set Ár = Ár*1.2 WHERE Auto.Tulaj = (SELECT Tulajdonos.Tkód FROM Tulajdonos WHERE Tulajdonos.Cím = 'Eger');
+
+SELECT Auto.Rendszám FROM Auto WHERE Auto.Ár < ANY (SELECT Auto.Ár FROm Auto WHERE Auto.Szín = 'Piros');
+
+SELECT Auto.Rendszám FROM Auto WHERE Auto.Ár < ALL (SELECT Auto.Ár FROm Auto WHERE Auto.Szín = 'Piros');
+
+SELECT Név FROM Tulajdonos WHERE Tkód NOT IN (SELECT Auto.Tulaj FROM Auto WHERE Auto.Tulaj IS NOt NULL);
+
