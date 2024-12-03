@@ -1,3 +1,25 @@
+SELECT rendszam, szin FROM auto;
+
+SELECT DISTINCT tipus FROM auto;
+		
+SELECT * FROM tulajdonos WHERE Név="Kovács Magor";
+
+SELECT Auto.Típus, SUM(Auto.Ár/406,99) AS Euro FROM Auto
+GROUP BY Auto.Típus;
+
+SELECT Auto.Rendszám, Auto.Típus FROM Auto
+WHERE Auto.Ár<1000 AND Auto.Szín NOT LIKE '%lila%';
+
+SELECT * FROM Auto
+WHERE Auto.Rendszám LIKE '_%-2%';
+
+SELECT * FROM Auto
+WHERE Auto.Rendszám LIKE '%2%' OR Auto.Rendszám LIKE '%4%' OR Auto.Rendszám LIKE '%8%' OR Auto.Rendszám LIKE '%6%' OR Auto.Rendszám LIKE '%10%';
+
+SELECT AVG(Auto.Ár) As Average FROM Auto;
+
+SELECT COUNT(*) As Db FROM Auto;
+
 UPDATE Auto Set Ár = Ár*1.2 WHERE Auto.Tulaj = (SELECT Tulajdonos.Tkód FROM Tulajdonos WHERE Tulajdonos.Cím = 'Eger');
 
 SELECT Auto.Rendszám FROM Auto WHERE Auto.Ár < ANY (SELECT Auto.Ár FROm Auto WHERE Auto.Szín = 'Piros');
